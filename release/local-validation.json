@@ -1,0 +1,53 @@
+{
+  "timestamp_utc": "2026-09-12T15:06:20.549318+00:00",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "tests": 116,
+  "passed": 112,
+  "failures": 0,
+  "errors": 0,
+  "skipped": [
+    {
+      "test": "test_cmd_launcher_from_different_working_directory (test_safety.WindowsTests.test_cmd_launcher_from_different_working_directory)",
+      "reason": "Windows-native behavior; scheduled in Windows CI, not executed in this Linux run"
+    },
+    {
+      "test": "test_locked_source_file_fails_instead_of_being_skipped (test_safety.WindowsTests.test_locked_source_file_fails_instead_of_being_skipped)",
+      "reason": "Windows-native behavior; scheduled in Windows CI, not executed in this Linux run"
+    },
+    {
+      "test": "test_ntfs_private_output_acl_protected (test_safety.WindowsTests.test_ntfs_private_output_acl_protected)",
+      "reason": "Windows-native behavior; scheduled in Windows CI, not executed in this Linux run"
+    },
+    {
+      "test": "test_windows_junction_is_refused (test_safety.WindowsTests.test_windows_junction_is_refused)",
+      "reason": "Windows-native behavior; scheduled in Windows CI, not executed in this Linux run"
+    }
+  ],
+  "duration_seconds": 9.425,
+  "successful": true,
+  "scope": "Synthetic fixtures only; not an authenticated Claude/Codex UI restore test.",
+  "coverage": {
+    "tool": "coverage.py",
+    "scope": "In-process Python runtime modules. Subprocess executions and Windows-only branches are not fully counted. Coverage is not a correctness or security certificate.",
+    "combined_statement_branch_percent": 87.56,
+    "by_module": {
+      "src/aidbackup/__init__.py": 100.0,
+      "src/aidbackup/cli.py": 90.27,
+      "src/aidbackup/core.py": 88.65,
+      "src/aidbackup/providers.py": 77.78
+    }
+  },
+  "runtime_source_sha256": {
+    "src/aidbackup/__init__.py": "9eaf1765cf33d5b73fcab3baf34eaa55ae255ce2623456fed7527c8577d8b587",
+    "src/aidbackup/cli.py": "3ec70587c40c2311539c54e4f43a5bdf039e76872406542a25b86101ab33a1ef",
+    "src/aidbackup/core.py": "38d5e60497e372866e3def4732a24955bfa51413cf907d0c183ee3e175c74e88",
+    "src/aidbackup/providers.py": "6ed3e93ff1316db3600f9d687a391525d4f68af2dae06e0e018239e341deea26"
+  },
+  "notes": [
+    "All fixtures are synthetic; no installed Claude/Codex state was read.",
+    "Windows-native tests are configured but have not executed in this local environment.",
+    "Actual authenticated app session resume and independent review remain pending.",
+    "Coverage was measured in a separate run of the same runtime code and full suite."
+  ]
+}

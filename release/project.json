@@ -1,0 +1,28 @@
+{
+  "name": "AI Dev State Backup",
+  "slug": "windows-ai-dev-state-backup",
+  "version": "2.0.0-rc.1",
+  "python_version": "2.0.0rc1",
+  "snapshot_format": 3,
+  "prerelease": true,
+  "repository": "Terrachad/windows-ai-dev-state-backup",
+  "description": "Backup and restore Claude Code, OpenAI Codex and Git/SSH state on Windows. SHA-256 verification, dry runs and isolated restore rehearsals.",
+  "topics": [
+    "claude-code",
+    "codex",
+    "openai-codex",
+    "windows",
+    "backup",
+    "restore",
+    "developer-tools",
+    "chat-history",
+    "disaster-recovery",
+    "migration",
+    "python",
+    "batch",
+    "local-first",
+    "privacy",
+    "cli",
+    "windows11"
+  ]
+}

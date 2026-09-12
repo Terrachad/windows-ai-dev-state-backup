@@ -1,0 +1,55 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  tests:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: windows-2022, python: '3.11'}
+          - {os: windows-2022, python: '3.14'}
+          - {os: windows-2025, python: '3.11'}
+          - {os: windows-2025, python: '3.14'}
+          - {os: ubuntu-24.04, python: '3.13'}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Synthetic filesystem and publication tests
+        run: python -B scripts/run_tests.py --report test-results/results.json
+      - name: Source, publication and documentation checks
+        run: python -B scripts/check_repository.py --report test-results/repository.json
+      - name: Build a reviewed release asset
+        run: python -B scripts/build_release.py --output dist
+      - name: Retain only sanitized synthetic reports
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: tests-${{ matrix.os }}-python-${{ matrix.python }}
+          path: test-results/*.json
+          if-no-files-found: ignore
+          retention-days: 14
+  required:
+    name: required
+    if: always()
+    needs: tests
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Require every matrix job
+        env:
+          MATRIX_RESULT: ${{ needs.tests.result }}
+        run: test "$MATRIX_RESULT" = success

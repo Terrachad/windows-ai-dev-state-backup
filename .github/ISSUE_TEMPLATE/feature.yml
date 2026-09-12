@@ -1,0 +1,21 @@
+name: Feature or provider proposal
+description: Suggest useful state coverage or an improvement with a safety model.
+title: "[Proposal]: "
+labels: [enhancement, needs-triage]
+body:
+  - type: textarea
+    id: problem
+    attributes: {label: User problem, description: "What workflow cannot be completed today?"}
+    validations: {required: true}
+  - type: textarea
+    id: design
+    attributes:
+      label: Proposed scope
+      description: Include official storage-location documentation and what must NOT be copied or restored.
+    validations: {required: true}
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety and tests
+      description: Sensitive data, authentication portability, symlinks, rollback and synthetic tests.
+    validations: {required: true}

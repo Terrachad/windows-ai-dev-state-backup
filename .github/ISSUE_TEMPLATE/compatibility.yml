@@ -1,0 +1,28 @@
+name: Compatibility result
+description: Share a synthetic Windows test result without publishing private state.
+title: "[Compatibility]: "
+labels: [compatibility, needs-triage]
+body:
+  - type: input
+    id: environment
+    attributes: {label: Windows / Python / filesystem / toolkit version}
+    validations: {required: true}
+  - type: textarea
+    id: result
+    attributes:
+      label: Test command and result summary
+      description: List pass/fail/skip counts. Do not upload live snapshots or transcripts.
+    validations: {required: true}
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: What was tested?
+      options: ["Synthetic suite only", "Disposable-profile manual test", "Own live-profile restore (describe only; no private data)"]
+    validations: {required: true}
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: This report contains no credentials, private keys, chat contents or recovery journals.
+          required: true

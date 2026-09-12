@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Complete native Windows validation before stable release",
+    "labels": [
+      "compatibility",
+      "tests",
+      "release-blocker"
+    ],
+    "body": "Run the synthetic CI matrix on Windows 2022/2025 with Python 3.11/3.14. Record failures and skips, then test standard-user NTFS permissions, locked sources, redirected Documents, deep paths and BAT launchers on a disposable Windows 11 profile. Do not attach real data. A green Linux run is not Windows proof."
+  },
+  {
+    "title": "Independent review of restore transaction and recovery paths",
+    "labels": [
+      "safety",
+      "help wanted",
+      "release-blocker"
+    ],
+    "body": "Review src/aidbackup/core.py against docs/architecture.md and docs/recovery.md. Focus on preserve/install failure boundaries, journal loss, reboot interruptions, reparse points and conflicts created during staging. Add synthetic reproductions. No claim of an independent audit has been made."
+  },
+  {
+    "title": "Document a disposable-profile application restore walkthrough",
+    "labels": [
+      "documentation",
+      "compatibility",
+      "help wanted"
+    ],
+    "body": "After synthetic validation, test a deliberately non-sensitive Claude Code/Codex conversation in an isolated Windows profile. Record versions and whether session discovery works after restore. Separate session portability from sign-in. Never use a production account transcript as a fixture."
+  },
+  {
+    "title": "Design opt-in encrypted output without command-line secrets",
+    "labels": [
+      "enhancement",
+      "security"
+    ],
+    "body": "Design only: authenticated encryption, recovery UX, password input that never enters a process command line/log, corrupted archive behavior, streaming/large files and key loss. Current ZIP output is deliberately labelled unencrypted. Do not add an insecure home-made cipher."
+  },
+  {
+    "title": "Specify a read-only legacy V8 importer",
+    "labels": [
+      "provider",
+      "enhancement"
+    ],
+    "body": "Current public format is 3; private V8 snapshots are not automatically accepted. Propose an explicit importer with source read-only behavior, full inclusion/exclusion reporting, hash verification and no silent conversion of old restore destinations. Test only synthetic legacy folders."
+  },
+  {
+    "title": "Improve troubleshooting examples using synthetic paths",
+    "labels": [
+      "documentation",
+      "good first issue"
+    ],
+    "body": "Add one concise example for a missing custom CODEX_HOME and one for a long-path error. Use fake paths only, explain what is and is not checked, and keep recovery instructions non-destructive."
+  }
+]

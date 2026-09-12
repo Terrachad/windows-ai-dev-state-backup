@@ -1,0 +1,14 @@
+changelog:
+  exclude:
+    labels: ["skip-changelog"]
+  categories:
+    - title: Safety and integrity
+      labels: ["safety", "security"]
+    - title: Fixes
+      labels: ["bug"]
+    - title: New coverage and improvements
+      labels: ["enhancement", "provider"]
+    - title: Documentation and testing
+      labels: ["documentation", "tests"]
+    - title: Other changes
+      labels: ["*"]

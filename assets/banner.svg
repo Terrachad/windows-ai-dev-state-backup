@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+<title id="title">AI Dev State Backup</title>
+<desc id="desc">Claude Code and Codex state backup for Windows. Snapshot, verify, rehearse, restore. Community release candidate.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111c2f"/><stop offset="1" stop-color="#070d19"/></linearGradient><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#263347" stroke-width="1" opacity=".25"/></pattern></defs>
+<rect width="1280" height="640" rx="24" fill="url(#bg)"/><rect width="1280" height="640" rx="24" fill="url(#grid)"/>
+<rect x="64" y="58" width="42" height="6" rx="3" fill="#64e7c4"/>
+<text x="124" y="69" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="600" letter-spacing="3" fill="#95acbe">WINDOWS · LOCAL-FIRST</text>
+<text x="60" y="206" font-family="DejaVu Sans,sans-serif" font-size="76" font-weight="700" letter-spacing="-2" fill="#f7f9fd">AI Dev State</text>
+<text x="60" y="297" font-family="DejaVu Sans,sans-serif" font-size="76" font-weight="700" letter-spacing="-2" fill="#64e7c4">Backup</text>
+<text x="64" y="365" font-family="DejaVu Sans,sans-serif" font-size="27" fill="#d0dce7">Keep your coding context.</text>
+<text x="64" y="409" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#9eb0c3">Claude Code + OpenAI Codex + optional Git/SSH</text>
+<g transform="translate(899 147)">
+<rect x="22" y="-8" width="250" height="276" rx="22" fill="#0d192c" stroke="#294258" stroke-width="2"/>
+<rect x="7" y="8" width="250" height="276" rx="22" fill="#122238" stroke="#305369" stroke-width="2"/>
+<rect x="-8" y="25" width="250" height="276" rx="22" fill="#182d42" stroke="#3a6275" stroke-width="2"/>
+<path d="M35 98V80H96L113 98H197V214H35Z" fill="#1e4554" stroke="#64e7c4" stroke-width="3" stroke-linejoin="round"/>
+<path d="M92 158L112 178L151 136" fill="none" stroke="#64e7c4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="41" y="263" font-family="DejaVu Sans Mono,monospace" font-size="16" fill="#c2d8e5">SHA-256 VERIFIED</text>
+</g>
+<line x1="64" y1="465" x2="1216" y2="465" stroke="#2c4054"/>
+<g font-family="DejaVu Sans,sans-serif" font-size="21" fill="#d2deea">
+<text x="64" y="523"><tspan fill="#64e7c4">01</tspan> Snapshot</text>
+<text x="345" y="523"><tspan fill="#64e7c4">02</tspan> Verify</text>
+<text x="626" y="523"><tspan fill="#64e7c4">03</tspan> Rehearse</text>
+<text x="948" y="523"><tspan fill="#64e7c4">04</tspan> Restore</text>
+</g>
+<text x="64" y="594" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#8fa8ba">Community project · Python 3.11+ · MIT</text>
+<text x="1008" y="594" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#8fa8ba">Release candidate</text>
+</svg>

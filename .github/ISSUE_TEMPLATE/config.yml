@@ -1,0 +1,3 @@
+blank_issues_enabled: false
+# Private vulnerability reporting must be enabled by the repository owner.
+# Do not add a public issue template for vulnerabilities or credential leaks.
