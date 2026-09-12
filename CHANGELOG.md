@@ -19,6 +19,7 @@ Safety-focused public release candidate. **Not yet a stable release.**
 - ZIP/ZIP64 verification, adjacent SHA-256 sidecars and validated extraction into new directories.
 - Private output permissions, custom agent homes and redirected Documents handling.
 - Security/reporting policy, support docs, repository guardrails, release tooling and maintainer publication helpers.
+- Synthetic troubleshooting examples for missing custom Codex homes and long-path errors.
 
 ### Breaking changes
 
